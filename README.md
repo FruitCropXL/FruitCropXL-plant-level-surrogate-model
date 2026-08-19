@@ -1,1 +1,1 @@
-# fruitcropxl-plant-level-surrogate-model
+# FruitCropXL-plant-level-surrogate-model
