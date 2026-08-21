@@ -1,0 +1,25 @@
+Training set shape:  (242768, 28) , Test set shape:  (49600, 28)
+Index(['timestamp', 'year', 'dayOfYear', 'hourOfDay', 'rowDistance',
+       'rowOrientation', 'incomingRadiation', 'azimuth', 'solarElevation',
+       'leafAreaPerPlant', 'fDiffuseLight', 'Ta', 'rh', 'wind',
+       'soilWaterPotential', 'waterFlux_optimized', 'xylemWaterPotential',
+       'intWaterPotential_1', 'intWaterPotential_2', 'intWaterPotential_3',
+       'intWaterPotential_4', 'P:eq1_b', 'P:phi_stem', 'P:Grmax_a',
+       'P:slope_Jmax', 'P:cx1', 'subfolder', 'split'],
+      dtype='object')
+train_targets:  (242768, 6) , test_targets:  (49600, 6)
+X_train:  (242768, 15) y_train:  (242768, 6) X_test:  (49600, 15) y_test:  (49600, 6)
+Namespace(data_loc='./newData', task='water', features='', targets='waterFlux_optimized,xylemWaterPotential,intWaterPotential_1,intWaterPotential_2,intWaterPotential_3,intWaterPotential_4', plot_feature_correlations=True, plot_results=True, outdir='outputs/2026-08-20-22-19-48_newData_water', standardize=True, NOW='2026-08-20-22-19-48', model_path=None, scaler1_path=None, scaler2_path=None, seed=1, scaler_y=False, test=False, feature_cols=['hourOfDay', 'azimuth', 'solarElevation', 'leafAreaPerPlant', 'fDiffuseLight', 'incomingRadiation', 'Ta', 'rh', 'wind', 'soilWaterPotential', 'P:eq1_b', 'P:phi_stem', 'P:Grmax_a', 'P:slope_Jmax', 'P:cx1'], filename='')
+Training mode ...
+args.seed= 1
+AdaBoost - Mean nRMSE_train: 0.0228, R2_train: 0.9994, Mean nRMSE_test: 0.2666, R2_test: 0.9245
+  Per-target R2_test (seed 1): waterFlux_optimized: 0.8348, xylemWaterPotential: 0.9505, intWaterPotential_1: 0.9442, intWaterPotential_2: 0.9447, intWaterPotential_3: 0.9373, intWaterPotential_4: 0.9354
+MLP - Mean nRMSE_train: 0.0307, R2_train: 0.9990, Mean nRMSE_test: 0.1800, R2_test: 0.9673
+  Per-target R2_test (seed 1): waterFlux_optimized: 0.9541, xylemWaterPotential: 0.9722, intWaterPotential_1: 0.9677, intWaterPotential_2: 0.9713, intWaterPotential_3: 0.9675, intWaterPotential_4: 0.9712
+Seed 1 - Time taken: 2:02:21.260671
+Avg results over 1 seeds for AdaBoost: Mean nRMSE_train: 0.0228-0.0000, R2_train: 0.9994-0.0000, Mean nRMSE_test: 0.2666-0.0000, R2_test: 0.9245-0.0000
+  Per-target R2_test: waterFlux_optimized: 0.8348, xylemWaterPotential: 0.9505, intWaterPotential_1: 0.9442, intWaterPotential_2: 0.9447, intWaterPotential_3: 0.9373, intWaterPotential_4: 0.9354
+Best results for AdaBoost: Mean nRMSE_train: 0.0228, R2_train: 0.9994, Mean nRMSE_test: 0.2666, R2_test: 0.9245
+Avg results over 1 seeds for MLP: Mean nRMSE_train: 0.0307-0.0000, R2_train: 0.9990-0.0000, Mean nRMSE_test: 0.1800-0.0000, R2_test: 0.9673-0.0000
+  Per-target R2_test: waterFlux_optimized: 0.9541, xylemWaterPotential: 0.9722, intWaterPotential_1: 0.9677, intWaterPotential_2: 0.9713, intWaterPotential_3: 0.9675, intWaterPotential_4: 0.9712
+Best results for MLP: Mean nRMSE_train: 0.0307, R2_train: 0.9990, Mean nRMSE_test: 0.1800, R2_test: 0.9673

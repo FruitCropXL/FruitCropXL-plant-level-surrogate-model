@@ -1,0 +1,22 @@
+Training set shape:  (189408, 16) , Test set shape:  (28800, 16)
+Index(['timestamp', 'year', 'dayOfYear', 'hourOfDay', 'rowDistance',
+       'rowOrientation', 'incomingRadiation', 'azimuth', 'solarElevation',
+       'leafAreaPerPlant', 'fDiffuseLight', 'fabsPAR', 'fPAR_1',
+       'soilWaterPotential', 'subfolder', 'split'],
+      dtype='object')
+train_targets:  (189408, 2) , test_targets:  (28800, 2)
+X_train:  (189408, 8) y_train:  (189408, 2) X_test:  (28800, 8) y_test:  (28800, 2)
+Namespace(data_loc='./newData', task='light', features='', targets='fabsPAR,fPAR_1', plot_feature_correlations=True, plot_results=True, outdir='outputs/2026-08-20-22-19-51_newData_light', standardize=True, NOW='2026-08-20-22-19-51', model_path=None, scaler1_path=None, scaler2_path=None, seed=1, scaler_y=False, test=False, feature_cols=['hourOfDay', 'rowOrientation', 'rowDistance', 'azimuth', 'solarElevation', 'leafAreaPerPlant', 'fDiffuseLight', 'incomingRadiation'], filename='')
+Training mode ...
+args.seed= 1
+AdaBoost - Mean nRMSE_train: 0.0755, R2_train: 0.9941, Mean nRMSE_test: 0.2624, R2_test: 0.9359
+  Per-target R2_test (seed 1): fabsPAR: 0.9459, fPAR_1: 0.9259
+MLP - Mean nRMSE_train: 0.1117, R2_train: 0.9865, Mean nRMSE_test: 0.1397, R2_test: 0.9812
+  Per-target R2_test (seed 1): fabsPAR: 0.9905, fPAR_1: 0.9719
+Seed 1 - Time taken: 0:15:22.498455
+Avg results over 1 seeds for AdaBoost: Mean nRMSE_train: 0.0755-0.0000, R2_train: 0.9941-0.0000, Mean nRMSE_test: 0.2624-0.0000, R2_test: 0.9359-0.0000
+  Per-target R2_test: fabsPAR: 0.9459, fPAR_1: 0.9259
+Best results for AdaBoost: Mean nRMSE_train: 0.0755, R2_train: 0.9941, Mean nRMSE_test: 0.2624, R2_test: 0.9359
+Avg results over 1 seeds for MLP: Mean nRMSE_train: 0.1117-0.0000, R2_train: 0.9865-0.0000, Mean nRMSE_test: 0.1397-0.0000, R2_test: 0.9812-0.0000
+  Per-target R2_test: fabsPAR: 0.9905, fPAR_1: 0.9719
+Best results for MLP: Mean nRMSE_train: 0.1117, R2_train: 0.9865, Mean nRMSE_test: 0.1397, R2_test: 0.9812
